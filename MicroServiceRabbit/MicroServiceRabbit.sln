@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{6605FE93-0ECE-4A77-B235-7FE25AD6DB54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{CBD8B198-7E33-4FF8-9E4A-329C5BE19A63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Bus", "Infra.Bus", "{D2FCF7A3-00E3-44D7-B2A5-1A3561B57CE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{EF857182-9AE9-498F-B342-CA1F79BF4AFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C2006019-05FB-4112-9C1A-FE020B6DD160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceRabbit.Domain.Core", "MicroServiceRabbit.Domain.Core\MicroServiceRabbit.Domain.Core.csproj", "{E3EEE875-97A0-4B68-9284-AF2FA657A81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceRabbit.Infra.Bus", "MicroServiceRabbit.Infra.Bus\MicroServiceRabbit.Infra.Bus.csproj", "{85632219-B13C-43A5-A87E-1553DCD532B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceRabbit.Infra.IoC", "MicroServiceRabbit.Infra.IoC\MicroServiceRabbit.Infra.IoC.csproj", "{A128BCE8-BFAC-4234-8B66-CDEA082F91F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3EEE875-97A0-4B68-9284-AF2FA657A81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3EEE875-97A0-4B68-9284-AF2FA657A81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3EEE875-97A0-4B68-9284-AF2FA657A81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3EEE875-97A0-4B68-9284-AF2FA657A81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85632219-B13C-43A5-A87E-1553DCD532B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85632219-B13C-43A5-A87E-1553DCD532B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85632219-B13C-43A5-A87E-1553DCD532B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85632219-B13C-43A5-A87E-1553DCD532B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A128BCE8-BFAC-4234-8B66-CDEA082F91F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A128BCE8-BFAC-4234-8B66-CDEA082F91F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A128BCE8-BFAC-4234-8B66-CDEA082F91F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A128BCE8-BFAC-4234-8B66-CDEA082F91F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3EEE875-97A0-4B68-9284-AF2FA657A81D} = {6605FE93-0ECE-4A77-B235-7FE25AD6DB54}
+		{85632219-B13C-43A5-A87E-1553DCD532B2} = {D2FCF7A3-00E3-44D7-B2A5-1A3561B57CE1}
+		{A128BCE8-BFAC-4234-8B66-CDEA082F91F4} = {EF857182-9AE9-498F-B342-CA1F79BF4AFD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98A7C250-D358-46AF-95D2-F349562DC919}
+	EndGlobalSection
+EndGlobal
