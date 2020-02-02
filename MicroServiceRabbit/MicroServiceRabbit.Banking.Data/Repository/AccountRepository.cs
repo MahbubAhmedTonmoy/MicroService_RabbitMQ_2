@@ -3,10 +3,11 @@ using MicroServiceRabbit.Banking.Domain.Interfaces;
 using MicroServiceRabbit.Banking.Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace MicroServiceRabbit.Banking.Data.Repository
 {
-    class AccountRepository : IAccountRepository
+    public class AccountRepository : IAccountRepository
     {
         private readonly BankingDBContext _context;
 
@@ -18,5 +19,7 @@ namespace MicroServiceRabbit.Banking.Data.Repository
         {
             return _context.Accounts;
         }
+
+        
     }
 }

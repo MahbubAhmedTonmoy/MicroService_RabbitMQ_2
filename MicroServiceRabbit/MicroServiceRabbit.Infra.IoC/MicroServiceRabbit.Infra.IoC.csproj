@@ -6,6 +6,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MicroServiceRabbit.Banking.Application\MicroServiceRabbit.Banking.Application.csproj" />
+    <ProjectReference Include="..\MicroServiceRabbit.Banking.Data\MicroServiceRabbit.Banking.Data.csproj" />
+    <ProjectReference Include="..\MicroServiceRabbit.Banking.Domain\MicroServiceRabbit.Banking.Domain.csproj" />
     <ProjectReference Include="..\MicroServiceRabbit.Domain.Core\MicroServiceRabbit.Domain.Core.csproj" />
     <ProjectReference Include="..\MicroServiceRabbit.Infra.Bus\MicroServiceRabbit.Infra.Bus.csproj" />
   </ItemGroup>

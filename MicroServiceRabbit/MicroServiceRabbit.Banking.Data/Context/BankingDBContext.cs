@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MicroServiceRabbit.Banking.Data.Context
 {
-    class BankingDBContext : DbContext
+    public class BankingDBContext : DbContext
     {
         public BankingDBContext(DbContextOptions options) : base(options)
         {
