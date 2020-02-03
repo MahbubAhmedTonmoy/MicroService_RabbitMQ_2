@@ -14,6 +14,13 @@ namespace MicroServiceRabbit.Transfer.Data.Repository
         {
             _context = context;
         }
+
+        public void Add(TransferLog transferLog)
+        {
+            _context.Accounts.Add(transferLog);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<TransferLog> GetTansferLogs()
         {
             return _context.Accounts;

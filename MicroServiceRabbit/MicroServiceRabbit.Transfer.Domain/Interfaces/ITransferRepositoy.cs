@@ -8,5 +8,6 @@ namespace MicroServiceRabbit.Transfer.Domain.Interfaces
     public interface ITransferRepositoy
     {
         IEnumerable<TransferLog> GetTansferLogs();
+        void Add(TransferLog transferLog);
     }
 }
