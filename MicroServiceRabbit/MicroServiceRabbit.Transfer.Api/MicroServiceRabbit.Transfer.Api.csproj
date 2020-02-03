@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MicroServiceRabbit.Infra.IoC\MicroServiceRabbit.Infra.IoC.csproj" />
     <ProjectReference Include="..\MicroServiceRabbit.Transfer.Data\MicroServiceRabbit.Transfer.Data.csproj" />
+    <ProjectReference Include="..\MicroServiceRabbit.Transfer.Domain\MicroServiceRabbit.Transfer.Domain.csproj" />
   </ItemGroup>
 
 </Project>

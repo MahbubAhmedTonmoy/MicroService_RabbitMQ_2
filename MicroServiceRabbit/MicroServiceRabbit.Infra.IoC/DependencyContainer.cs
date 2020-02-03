@@ -9,6 +9,13 @@ using MicroServiceRabbit.Banking.Data.Context;
 using MediatR;
 using MicroServiceRabbit.Banking.Domain.Commands;
 using MicroServiceRabbit.Banking.Domain.CommandHandlers;
+using MicroServiceRabbit.Transfer.Application.Services;
+using MicroServiceRabbit.Transfer.Application.Interfaces;
+using MicroServiceRabbit.Transfer.Data.Repository;
+using MicroServiceRabbit.Transfer.Domain.Interfaces;
+using MicroServiceRabbit.Transfer.Data.Context;
+using MicroServiceRabbit.Transfer.Domain.Events;
+using MicroServiceRabbit.Transfer.Domain.EventHandlers;
 
 namespace MicroServiceRabbit.Infra.IoC
 {
@@ -18,17 +25,21 @@ namespace MicroServiceRabbit.Infra.IoC
         {
             //Domain Bus
             services.AddTransient<IEventBus, RabbitMQBus>();
-
+            //event
+            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
             //Domain Banking Commands
             services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler >();
 
             //Application
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<ITransferService, TransferService>(); 
 
             //data
 
-            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IAccountRepository, AccountRepository>(); 
+            services.AddTransient<ITransferRepositoy, TransferRepositoy>();
             services.AddTransient<BankingDBContext>();
+            services.AddTransient<BankingDBContext_Transfer>();
         }
     }
 }

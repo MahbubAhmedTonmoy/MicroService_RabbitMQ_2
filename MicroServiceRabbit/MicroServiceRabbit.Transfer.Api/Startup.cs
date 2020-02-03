@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using MicroServiceRabbit.Domain.Core.Bus;
 using MicroServiceRabbit.Infra.IoC;
 using MicroServiceRabbit.Transfer.Data.Context;
+using MicroServiceRabbit.Transfer.Domain.EventHandlers;
+using MicroServiceRabbit.Transfer.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,7 +48,7 @@ namespace MicroServiceRabbit.Transfer.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Banking MicroService", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Transfer MicroService", Version = "v1" });
             });
             services.AddMediatR(typeof(Startup));
 
@@ -79,9 +82,16 @@ namespace MicroServiceRabbit.Transfer.Api
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking MicroService V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transfer MicroService V1");
             });
             app.UseMvc();
+            ConfigureEventBus(app);
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscriber<TransferCreatedEvent, TransferEventHandler>();
         }
     }
 }
