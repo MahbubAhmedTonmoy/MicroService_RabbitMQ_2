@@ -6,7 +6,7 @@ namespace MicroServiceRabbit.Domain.Core.Bus
 {
     public interface IEventBus
     {
-         Task SandCommand<T> (T command) where T : Command;
+         Task SandCommand<T> (T command) where T : Command;  //MediatR library to send command
          void Publish<T>(T @event) where T : Event;
          void Subscriber<T, TH>()
              where T: Event 
